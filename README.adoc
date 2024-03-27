@@ -1,0 +1,31 @@
+:toc:
+
+= DDD directory structure creator
+
+This is a simple plugin, which lets you create a directory structure for your project. Mark an existing directory as a root directory, and all the child directory names are saved. You can now create a new directory like that.
+
+For example:
+- root
+-- child1
+--- grandchild1_1
+--- grandchild1_2
+-- child2
+-- target
+
+Now you mark root as root, go to another directory(e.g. target), press `Alt+Insert` and select "Create directory structure". This is the new structure
+
+- root
+-- child1
+--- grandchild1_1
+--- grandchild1_2
+-- child2
+-- target
+--- child1 # new
+---- grandchild1_1 # new
+---- grandchild1_2 # new
+--- child2 # new
+--- target # new
+
+== Install
+
+1. TODO

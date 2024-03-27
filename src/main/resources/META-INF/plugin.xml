@@ -1,0 +1,64 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>de.keeyzar.gpt-helper.gpt-helper</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>GPT Flutter Intl</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="info@kevin-kekule.de" url="https://kevin-kekule.de">Keeyzar</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Copy paste entire directory structures
+
+    <p>
+        <b>How to use:</b>
+        <ul>
+            <li>Install the plugin</li>
+            <li>Right-click any directory</li>
+            <li>Press "Mark as root"</li>
+            <li>go to new folder, press Alt+Insert (Actions: new)</li>
+            <li>Press "Create new DDD Structure"</li>
+        </ul>
+    </p>
+
+    <p>
+        <b>Rate this plugin:</b>
+        <br/>
+        Please, do me a favor and rate this plugin. It took a lot of time. :)
+        <a href="TODO">TODO</a>
+    </p>
+  ]]></description>
+
+    <change-notes>
+        <![CDATA[
+      <ul>
+        <li><b>1.0</b> initial release</li>
+      </ul>
+    ]]>
+    </change-notes>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <actions>
+        <action id="de.keeyzar.ddddirectory.presentation.actions.CreateDirectoryStructureAction"
+                class="de.keeyzar.ddddirectory.ddd.presentation.actions.CreateDirectoryStructureAction" text="Generate DDD Directory Tree"
+                description="Generates a directory tree based on a list of directory paths">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+        </action>
+        <action id="de.keeyzar.ddddirectory.ddd.presentation.actions.MarkDirectoryStructureAction"
+                class="de.keeyzar.ddddirectory.ddd.presentation.actions.MarkDirectoryStructureAction"
+                text="Mark this as root directory structure for new DDD dir structure"
+                description="all folders are recursively saved, and when you create a new directory structure, than these folders are generated">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
