@@ -44,7 +44,7 @@ tasks {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
     runPluginVerifier {
-        ideVersions.set(listOf("2022.2.4", "2023"))
+        ideVersions.set(listOf("2023.1"))
     }
 }
 
