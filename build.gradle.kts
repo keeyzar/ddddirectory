@@ -15,15 +15,8 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2022.2.4")
+    version.set("2023.1")
     type.set("IC") // Target IDE Platform
-
-    plugins.set(
-        listOf(
-            "Dart:222.4560",
-            "org.jetbrains.plugins.terminal:222.3739.67"
-        )
-    )
 }
 
 tasks {
@@ -51,11 +44,11 @@ tasks {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
     runPluginVerifier {
-        ideVersions.set(listOf("2022.2.4", "2023.1", "2023.2"))
+        ideVersions.set(listOf("2022.2.4", "2023"))
     }
 }
 
-val koin_version = "3.4.0"
+val koin_version = "3.5.0"
 
 //finally got it working, holy moly shit, such an annoying error...
 dependencies {
@@ -72,16 +65,16 @@ dependencies {
         }
     }
 
-    implementation("com.fasterxml.jackson.core:jackson-core:2.14.+")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.+")
-    implementation("org.slf4j:slf4j-api:2.0.7")
+    implementation("com.fasterxml.jackson.core:jackson-core:2.17.+")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.17.+")
+    implementation("org.slf4j:slf4j-api:2.0.12")
 
     implementation("org.mapstruct:mapstruct:1.5.5.Final")
     kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.0")
-    testImplementation("org.assertj:assertj-core:3.24.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
+    testImplementation("org.assertj:assertj-core:3.25.3")
     testImplementation("io.insert-koin:koin-test:$koin_version")
-    testImplementation("org.mockito:mockito-core:5.3.1")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
+    testImplementation("org.mockito:mockito-core:5.11.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
 }

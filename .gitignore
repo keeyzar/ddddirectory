@@ -47,4 +47,4 @@ src/test/resources/keys/
 .idea/sonarlint/
 
 # hprof files
-./**.hprof
+**.hprof
