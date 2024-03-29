@@ -1,8 +1,8 @@
 package de.keeyzar.ddddirectory.features.ddd.infrastructure.mapper
 
-import de.keeyzar.gpthelper.gpthelper.features.ddd.domain.entity.DirectoryStructure
-import de.keeyzar.gpthelper.gpthelper.features.ddd.infrastructure.model.DirectoryStructureModel
-import org.assertj.core.api.Assertions
+import de.keeyzar.ddddirectory.ddd.domain.entity.DirectoryStructure
+import de.keeyzar.ddddirectory.ddd.infrastructure.mapper.DirectoryStructureMapper
+import de.keeyzar.ddddirectory.ddd.infrastructure.model.DirectoryStructureModel
 import org.assertj.core.api.Assertions.*
 import org.junit.Test
 import org.mapstruct.factory.Mappers
@@ -17,7 +17,7 @@ class DirectoryStructureMapperTest {
 
         val model = sut.toModel(entity)
 
-        assertThat(model.subDirectories).isEqualTo(entity.subDirectories)
+        assertThat(model.getSubDirectories()).isEqualTo(entity.subDirectories)
     }
 
 
@@ -29,6 +29,6 @@ class DirectoryStructureMapperTest {
 
         val entity = sut.toEntity(model)
 
-        assertThat(entity.subDirectories).isEqualTo(model.subDirectories)
+        assertThat(entity.subDirectories).isEqualTo(model.getSubDirectories())
     }
 }
