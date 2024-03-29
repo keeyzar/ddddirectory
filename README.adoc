@@ -31,4 +31,4 @@ Now you mark root as root, go to another directory(e.g. target), press `Alt+Inse
 
 == Install
 
-1. TODO
+1. Either search in plugins for ```Directory Creator``` and install it or download it from the [plugin repository](https://plugins.jetbrains.com/plugin/24046-directory-creator)
