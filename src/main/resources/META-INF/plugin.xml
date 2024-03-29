@@ -38,6 +38,7 @@
     <change-notes>
         <![CDATA[
       <ul>
+        <li><b>1.1</b> increase compatibility with other ide versions</li>
         <li><b>1.0</b> initial release</li>
       </ul>
     ]]>
@@ -56,8 +57,8 @@
         </action>
         <action id="de.keeyzar.ddddirectory.ddd.presentation.actions.MarkDirectoryStructureAction"
                 class="de.keeyzar.ddddirectory.ddd.presentation.actions.MarkDirectoryStructureAction"
-                text="Mark this as root directory structure for new DDD dir structure"
-                description="all folders are recursively saved, and when you create a new directory structure, than these folders are generated">
+                text="Mark This as Root Directory Structure for New DDD Dir Structure"
+                description="All folders are recursively saved, and when you create a new directory structure, than these folders are generated">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>
     </actions>
