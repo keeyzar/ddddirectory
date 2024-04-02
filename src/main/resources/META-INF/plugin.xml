@@ -38,6 +38,7 @@
     <change-notes>
         <![CDATA[
       <ul>
+        <li><b>1.1</b> increase minimum required IDE version</li>
         <li><b>1.1</b> increase compatibility with other ide versions</li>
         <li><b>1.0</b> initial release</li>
       </ul>
